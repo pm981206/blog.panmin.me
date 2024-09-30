@@ -3,23 +3,19 @@ import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
-  title: "My Site",
-  tagline: "Dinosaurs are cool",
+  title: "Pan Min",
   favicon: "img/favicon.ico",
-  url: "https://your-docusaurus-site.example.com",
+  url: "https://blog.panmin.me",
   baseUrl: "/",
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: "en",
-    locales: ["en"],
+    defaultLocale: "zh-Hans",
+    locales: ["zh-Hans"],
   },
   presets: [
     [
       "classic",
       {
-        docs: false, // Optional: disable the docs plugin
+        docs: false, // disable the docs plugin
         blog: {
           routeBasePath: "/", // Serve the blog at the site's root
           showReadingTime: true,
@@ -31,30 +27,57 @@ const config: Config = {
       } satisfies Preset.Options,
     ],
   ],
-
   themeConfig: {
-    // Replace with your project's social card
-    image: "img/docusaurus-social-card.jpg",
     navbar: {
-      title: "My Site",
       logo: {
         alt: "My Site Logo",
         src: "img/logo.svg",
       },
       items: [
         {
-          href: "https://github.com/facebook/docusaurus",
+          label: "博客",
+          to: "/",
+          position: "right",
+        },
+        {
+          label: "项目",
+          to: "/project",
+          position: "right",
+        },
+        {
+          label: "关于",
+          to: "/about",
+          position: "right",
+        },
+        {
+          href: "https://github.com/pm981206",
           label: "GitHub",
           position: "right",
         },
       ],
     },
     footer: {
-      style: "dark",
+      style: "light",
       links: [
         {
-          label: "Stack Overflow",
-          href: "https://stackoverflow.com/questions/tagged/docusaurus",
+          label: "哔哩哔哩",
+          href: "https://www.bilibili.com/",
+        },
+        {
+          label: "知乎",
+          href: "https://www.zhihu.com/",
+        },
+        {
+          label: "微博",
+          href: "https://weibo.com/",
+        },
+        {
+          label: "抖音",
+          href: "https://www.douyin.com/",
+        },
+        {
+          label: "Youtube",
+          href: "https://youtube.com/",
         },
         {
           label: "Discord",
@@ -64,8 +87,16 @@ const config: Config = {
           label: "Twitter",
           href: "https://twitter.com/docusaurus",
         },
+        {
+          label: "Instagram",
+          href: "https://instagram.com/pm981206",
+        },
+        {
+          label: "GitHub",
+          href: "https://github.com/pm981206",
+        },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Pan Min, Inc. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
